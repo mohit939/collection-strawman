@@ -21,8 +21,6 @@ val commonSettings = Seq(
   fork in Test := true,
   parallelExecution in Test := false
 )
-val main = project(appName, appVersion, appDependencies, mainLang = SCALA, settings = jacoco_settings).settings(
-   parallelExecution in jacoco.Config := false)
 
 val collections =
   project.in(file("."))
