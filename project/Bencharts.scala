@@ -9,7 +9,6 @@ import org.jfree.chart.renderer.xy.XYErrorRenderer
 import org.jfree.data.xy.{YIntervalSeries, YIntervalSeriesCollection}
 import play.api.libs.json.{JsObject, Json}
 import sbt._
-import de.johoop.jacoco4sbt.JacocoPlugin
 object Bencharts {
 
   /**
