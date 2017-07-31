@@ -20,6 +20,8 @@ val commonSettings = Seq(
   fork in Test := true,
   parallelExecution in Test := false
 )
+val main = PlayProject(appName, appVersion, appDependencies, mainLang = SCALA, settings = jacoco_settings).settings(
+   parallelExecution in jacoco.Config := false)
 
 val collections =
   project.in(file("."))
@@ -92,3 +94,4 @@ val memoryBenchmark =
     )
 
 lazy val charts = inputKey[File]("Runs the benchmarks and produce charts")
+lazy val jacoco_settings = Defaults.defaultSettings ++ Seq(jacoco.settings: _*)
