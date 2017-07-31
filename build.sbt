@@ -1,4 +1,5 @@
 // Convenient setting that allows writing `set scalaVersion := dotty.value` in sbt shell to switch from Scala to Dotty
+import de.johoop.jacoco4sbt.JacocoPlugin
 val dotty = settingKey[String]("dotty version")
 dotty in ThisBuild := "0.2.0-RC1"
 
